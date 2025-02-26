@@ -1,4 +1,4 @@
-# article_to_markdown_chrome_extension
+# Web Article to markdown Chrome Extension
 A Google Chrome extension (MV3) that allows for easy saving of articles/selected text as a markdown document (including a simple tagging method)
 # Setup
 Bring your own markdown js - this uses turndown which you can grab from:
