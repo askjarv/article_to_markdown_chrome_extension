@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Article to Markdown</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 10px;
+    }
+    .preview {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .tags-input {
+      margin: 10px 0;
+    }
+    .tag-suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin: 5px 0;
+    }
+    .tag-pill {
+      background: #e0e0e0;
+      padding: 2px 8px;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+    .selected-tags {
+      margin: 5px 0;
+    }
+    .preview-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .preview {
+      font-family: monospace;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+    .preview.rendered {
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+  </style>
+  <script src="turndown.js"></script>
+  <script src="marked.umd.js"></script>
+</head>
+<body>
+  <h2>Save Article as Markdown</h2>
+  <div id="selectionInfo" style="display: none; margin-bottom: 10px;">
+    <label>
+      <input type="checkbox" id="useSelection" checked>
+      Save selected text only
+    </label>
+  </div>
+  <div class="preview-controls">
+    <h3>Preview</h3>
+    <button id="togglePreview">Show HTML Preview</button>
+  </div>
+  <div class="preview"></div>
+  <div class="tags-input">
+    <input type="text" id="tagInput" placeholder="Add tags (comma separated)">
+    <div class="tag-suggestions" id="tagSuggestions"></div>
+    <div class="selected-tags" id="selectedTags"></div>
+  </div>
+  <button id="saveButton">Save Article</button>
+  <script src="popup.js"></script>
+</body>
+</html> 
